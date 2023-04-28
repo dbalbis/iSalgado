@@ -8,24 +8,37 @@ a {
 
 
 h1 {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 15px;
+
+}
+
+h5.rut {
+  font-weight: bold;
+  font-size: 13px;
+
 }
 
 .contact-info {
   text-decoration: none;
-  font-size: 12px; 
+  font-size: 13px; 
+  font-weight: bold;
   color: #000; 
+  opacity: 0.8;
 }
 
 .contact-info a {
   color: black;
+}
+
+.icon {
+  font-size: 1.1rem; /* Tamaño de fuente de 1.5 rem (24 px) */
 }
 
 .container-fluid {
@@ -74,10 +87,29 @@ h5 {
   transform: scale(1.1);
   background-color: #128c7e;
   text-decoration: none;
+  animation: shake 0.4s;
 }
 
 .whatsapp-float i {
   line-height: 60px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 
