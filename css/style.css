@@ -1,3 +1,63 @@
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.call-to-action:before {
+  content: "";
+  position: absolute;
+  background-color: #1c375e;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+/* MI CSS */
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -6,12 +66,10 @@ a {
   text-decoration: none;
 }
 
-
 h1 {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-  
 }
 
 h5 {
@@ -41,10 +99,45 @@ h5.rut {
   font-size: 1.1rem; /* Tamaño de fuente de 1.5 rem (24 px) */
 }
 
-.container-fluid {
-  display: flex;
-  align-items: center;
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  
+    
+  }
+  h5.rut {
+    font-weight: bold;
+    font-size: 14px;
+  
+  }
+
+  
+  
+  .contact-info {
+    text-decoration: none;
+    font-size: 12px; 
+    font-weight: bold;
+    color: #000; 
+    opacity: 0.8;
+  }
+  .contact-info a {
+    color: black;
+  }
+  
+  .icon {
+    font-size: 1.0rem; /* Tamaño de fuente de 1.5 rem (24 px) */
+  }
 }
+
+
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 
 .carousel-indicators-container {
   position: absolute;
@@ -84,10 +177,12 @@ h5.rut {
 }
 
 .whatsapp-float:hover {
+  
   transform: scale(1.1);
   background-color: #128c7e;
   text-decoration: none;
   animation: shake 0.4s;
+  color: #fff;
 }
 
 .whatsapp-float i {
@@ -136,3 +231,174 @@ h5.rut {
     border-color: #18200f;
     color: #fff;
   }
+
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none; /* Agregamos esto */
+    border: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+  .ham1 .top {
+    stroke-dasharray: 40 139;
+  }
+  .ham1 .bottom {
+    stroke-dasharray: 40 180;
+  }
+  .ham1.active .top {
+    stroke-dashoffset: -98px;
+  }
+  .ham1.active .bottom {
+    stroke-dashoffset: -138px;
+  }
+  .ham2 .top {
+    stroke-dasharray: 40 121;
+  }
+  .ham2 .bottom {
+    stroke-dasharray: 40 121;
+  }
+  .ham2.active .top {
+    stroke-dashoffset: -102px;
+  }
+  .ham2.active .bottom {
+    stroke-dashoffset: -102px;
+  }
+  .ham3 .top {
+    stroke-dasharray: 40 130;
+  }
+  .ham3 .middle {
+    stroke-dasharray: 40 140;
+  }
+  .ham3 .bottom {
+    stroke-dasharray: 40 205;
+  }
+  .ham3.active .top {
+    stroke-dasharray: 75 130;
+    stroke-dashoffset: -63px;
+  }
+  .ham3.active .middle {
+    stroke-dashoffset: -102px;
+  }
+  .ham3.active .bottom {
+    stroke-dasharray: 110 205;
+    stroke-dashoffset: -86px;
+  }
+  .ham4 .top {
+    stroke-dasharray: 40 121;
+  }
+  .ham4 .bottom {
+    stroke-dasharray: 40 121;
+  }
+  .ham4.active .top {
+    stroke-dashoffset: -68px;
+  }
+  .ham4.active .bottom {
+    stroke-dashoffset: -68px;
+  }
+  .ham5 .top {
+    stroke-dasharray: 40 82;
+  }
+  .ham5 .bottom {
+    stroke-dasharray: 40 82;
+  }
+  .ham5.active .top {
+    stroke-dasharray: 14 82;
+    stroke-dashoffset: -72px;
+  }
+  .ham5.active .bottom {
+    stroke-dasharray: 14 82;
+    stroke-dashoffset: -72px;
+  }
+  .ham6 .top {
+    stroke-dasharray: 40 172;
+  }
+  .ham6 .middle {
+    stroke-dasharray: 40 111;
+  }
+  .ham6 .bottom {
+    stroke-dasharray: 40 172;
+  }
+  .ham6.active .top {
+    stroke-dashoffset: -132px;
+  }
+  .ham6.active .middle {
+    stroke-dashoffset: -71px;
+  }
+  .ham6.active .bottom {
+    stroke-dashoffset: -132px;
+  }
+  .ham7 .top {
+    stroke-dasharray: 40 82;
+  }
+  .ham7 .middle {
+    stroke-dasharray: 40 111;
+  }
+  .ham7 .bottom {
+    stroke-dasharray: 40 161;
+  }
+  .ham7.active .top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
+  }
+  .ham7.active .middle {
+    stroke-dashoffset: 23px;
+  }
+  .ham7.active .bottom {
+    stroke-dashoffset: -83px;
+  }
+  .ham8 .top {
+    stroke-dasharray: 40 160;
+  }
+  .ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+  }
+  .ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+  }
+  .ham8.active .top {
+    stroke-dashoffset: -64px;
+  }
+  .ham8.active .middle {
+    stroke-dashoffset: -20px;
+    transform: rotate(90deg);
+  }
+  .ham8.active .bottom {
+    stroke-dashoffset: -64px;
+  }
+
+  .ham6.navbar-toggler:not(.collapsed) {
+    outline: none;
+  }
+  
+  .ham6.navbar-toggler.active {
+    outline: none;
+  }
+
+
+  
+  
+
+
+
+  
