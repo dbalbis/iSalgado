@@ -85,7 +85,7 @@ h5.rut {
 
 .contact-info {
   text-decoration: none;
-  font-size: 13px; 
+  font-size: 18px; 
   font-weight: bold;
   color: #000; 
   opacity: 0.8;
@@ -93,10 +93,15 @@ h5.rut {
 
 .contact-info a {
   color: black;
+  
 }
+
+
 
 .icon {
   font-size: 1.1rem; /* Tamaño de fuente de 1.5 rem (24 px) */
+  
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -127,15 +132,20 @@ h5.rut {
   }
   
   .icon {
-    font-size: 1.0rem; /* Tamaño de fuente de 1.5 rem (24 px) */
+    font-size: 1.1rem; /* Tamaño de fuente de 1.5 rem (24 px) */
   }
 }
-
 
 
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+ul.footer-links a {
+  font-size: large;
+  color: #000;
+  font-weight: 500;
 }
 
 

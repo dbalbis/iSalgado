@@ -31,24 +31,26 @@
   </head>
   <body>
     <div
-      class="container-fluid bg-light contact-info"
+      class="container-fluid bg-light contact-info text-center"
       itemscope
       itemtype="http://schema.org/Organization"
+      style="margin: 0 auto"
     >
       <div class="container">
-        <div class="d-flex align-items-center py-2">
-          <i class="fas fa-phone icon mx-1"></i>
-          <span itemprop="telephone">29004751</span>
-          <i class="fas fa-map-marker-alt icon mx-1"></i>
+        <div class="d-flex justify-content-center align-items-center py-2">
+          <i class="fas fa-phone icon mx-2"></i>
+          <span itemprop="telephone" class="mx-2">29004751</span>
+          <i class="fas fa-map-marker-alt icon mx-2"></i>
           <span
             itemprop="address"
             itemscope
             itemtype="http://schema.org/PostalAddress"
+            class="mx-2"
           >
             <span itemprop="streetAddress">Colonia 1320</span>
           </span>
-          <i class="far fa-envelope icon mx-1"></i>
-          <span itemprop="email">
+          <i class="far fa-envelope icon mx-2"></i>
+          <span itemprop="email" class="mx-2">
             <a
               href="mailto:imprentasalgado@gmail.com"
               title="Correo electrónico de contacto"
@@ -326,75 +328,86 @@
       <div class="container position-relative">
         <div class="row justify-content-center">
           <div class="col-xl-6">
-            <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-            <!-- Signup form-->
-            <!-- * * * * * * * * * * * * * * *-->
-            <!-- * * SB Forms Contact Form * *-->
-            <!-- * * * * * * * * * * * * * * *-->
-            <!-- This form is pre-integrated with SB Forms.-->
-            <!-- To make this form functional, sign up at-->
-            <!-- https://startbootstrap.com/solution/contact-forms-->
-            <!-- to get an API token!-->
+            <h2 class="mb-4">¿Listo para comenzar? ¡Contáctanos ahora!</h2>
+            <!-- Formulario de contacto -->
             <form
               class="form-subscribe"
               id="contactFormFooter"
               data-sb-form-api-token="API_TOKEN"
             >
-              <!-- Email address input-->
-              <div class="row">
-                <div class="col">
-                  <input
-                    class="form-control form-control-lg"
-                    id="emailAddressBelow"
-                    type="email"
-                    placeholder="Email Address"
-                    data-sb-validations="required,email"
-                  />
-                  <div
-                    class="invalid-feedback text-white"
-                    data-sb-feedback="emailAddressBelow:required"
-                  >
-                    Email Address is required.
-                  </div>
-                  <div
-                    class="invalid-feedback text-white"
-                    data-sb-feedback="emailAddressBelow:email"
-                  >
-                    Email Address Email is not valid.
-                  </div>
+              <!-- Campo de dirección de correo electrónico -->
+              <div class="form-group mb-3">
+                <input
+                  class="form-control form-control-lg"
+                  id="emailAddressBelow"
+                  type="email"
+                  placeholder="Dirección de correo electrónico"
+                  data-sb-validations="required,email"
+                />
+                <div
+                  class="invalid-feedback text-white"
+                  data-sb-feedback="emailAddressBelow:required"
+                >
+                  La dirección de correo electrónico es requerida.
                 </div>
-                <div class="col-auto">
-                  <button
-                    class="btn btn-primary btn-lg disabled"
-                    id="submitButton"
-                    type="submit"
-                  >
-                    Submit
-                  </button>
+                <div
+                  class="invalid-feedback text-white"
+                  data-sb-feedback="emailAddressBelow:email"
+                >
+                  La dirección de correo electrónico no es válida.
                 </div>
               </div>
-              <!-- Submit success message-->
-              <!---->
-              <!-- This is what your users will see when the form-->
-              <!-- has successfully submitted-->
+              <!-- Campo de nombre -->
+              <div class="form-group mb-3">
+                <input
+                  class="form-control form-control-lg"
+                  id="name"
+                  type="text"
+                  placeholder="Tu Nombre"
+                  data-sb-validations="required"
+                />
+                <div
+                  class="invalid-feedback text-white"
+                  data-sb-feedback="name:required"
+                >
+                  El nombre es requerido.
+                </div>
+              </div>
+              <!-- Área de mensaje -->
+              <div class="form-group mb-3">
+                <textarea
+                  class="form-control form-control-lg"
+                  id="message"
+                  rows="4"
+                  placeholder="Tu Mensaje"
+                  data-sb-validations="required"
+                ></textarea>
+                <div
+                  class="invalid-feedback text-white"
+                  data-sb-feedback="message:required"
+                >
+                  El mensaje es requerido.
+                </div>
+              </div>
+              <!-- Botón de envío -->
+              <button
+                class="btn btn-primary btn-lg"
+                id="submitButton"
+                type="submit"
+              >
+                Enviar
+              </button>
+              <!-- Mensaje de éxito en el envío -->
               <div class="d-none" id="submitSuccessMessage">
                 <div class="text-center mb-3">
-                  <div class="fw-bolder">Form submission successful!</div>
-                  <p>To activate this form, sign up at</p>
-                  <a
-                    class="text-white"
-                    href="https://startbootstrap.com/solution/contact-forms"
-                    >https://startbootstrap.com/solution/contact-forms</a
-                  >
+                  <div class="fw-bolder">¡Envío del formulario exitoso!</div>
+                  <p>Nos pondremos en contacto contigo pronto.</p>
                 </div>
               </div>
-              <!-- Submit error message-->
-              <!---->
-              <!-- This is what your users will see when there is-->
-              <!-- an error submitting the form-->
+              <!-- Mensaje de error en el envío -->
               <div class="d-none" id="submitErrorMessage">
                 <div class="text-center text-danger mb-3">
-                  Error sending message!
+                  ¡Error al enviar el mensaje!
                 </div>
               </div>
             </form>
@@ -402,12 +415,13 @@
         </div>
       </div>
     </section>
+
     <!-- Footer-->
     <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-            <ul class="list-inline mb-2">
+            <ul class="list-inline mb-2 footer-links">
               <li class="list-inline-item"><a href="#!">About</a></li>
               <li class="list-inline-item">⋅</li>
               <li class="list-inline-item"><a href="#!">Contact</a></li>
@@ -417,19 +431,25 @@
               <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
             </ul>
             <p class="text-muted small mb-4 mb-lg-0">
-              &copy; Your Website 2023. All Rights Reserved.
+              &copy; Salgado y Salgado 2023. Diseño por
+              <a
+                href="https://www.linkedin.com/in/diego-balbis"
+                target="_blank"
+                rel="noopener noreferrer"
+                >dbalbis.</a
+              >
             </p>
           </div>
           <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
             <ul class="list-inline mb-0">
               <li class="list-inline-item me-4">
-                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                <a href="#!"><i class="bi-facebook fs-3 text-dark"></i></a>
               </li>
               <li class="list-inline-item me-4">
-                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                <a href="#!"><i class="bi-twitter fs-3 text-dark"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                <a href="#!"><i class="bi-instagram fs-3 text-dark"></i></a>
               </li>
             </ul>
           </div>
